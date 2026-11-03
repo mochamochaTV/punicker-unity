@@ -1,0 +1,809 @@
+<mxfile host="65bd71144e">
+    <diagram name="1 全体図" id="3120e585a8e4bd93">
+        <mxGraphModel dx="2026" dy="1833" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="c1" parent="1" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;" value="ぷにっかー Unity版：全体図（スクリプト・Unityの部品・データのつながり）" vertex="1">
+                    <mxGeometry height="40" width="1300" x="40" y="10" as="geometry"/>
+                </mxCell>
+                <mxCell id="evt" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;arcSize=12;fillColor=#FFF3E0;strokeColor=#E65100;" value="&lt;b&gt;EventSystem&lt;/b&gt; &lt;font style=&#39;font-size:10px&#39; color=&#39;#555555&#39;&gt;Unity 標準&lt;/font&gt;&lt;br&gt;タップを、押された物の&lt;br&gt;スクリプトに届ける" vertex="1">
+                    <mxGeometry height="80" width="220" x="40" y="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="start" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;arcSize=12;fillColor=#FFEBEE;strokeColor=#C62828;" value="&lt;b&gt;StartScreen.cs&lt;/b&gt;&lt;br&gt;&lt;font style=&#39;font-size:10px&#39; color=&#39;#555555&#39;&gt;付いている物：StartScreen&lt;/font&gt;&lt;br&gt;スタート画面の点滅と、&lt;br&gt;タップで消える動き" vertex="1">
+                    <mxGeometry height="84" width="220" x="40" y="290" as="geometry"/>
+                </mxCell>
+                <mxCell id="ui_start" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#F1F8E9;strokeColor=#558B2F;" value="StartScreen・Hint&lt;br&gt;&lt;font style=&#39;font-size:10px&#39; color=&#39;#555555&#39;&gt;CanvasGroup（透明度）&lt;/font&gt;" vertex="1">
+                    <mxGeometry height="56" width="200" x="50" y="420" as="geometry"/>
+                </mxCell>
+                <mxCell id="auto" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;arcSize=12;fillColor=#FFF3E0;strokeColor=#E65100;dashed=1;" value="&lt;b&gt;Unity が自動で呼ぶ関数&lt;/b&gt;&lt;br&gt;Awake → Start：最初に1回&lt;br&gt;Update：毎フレーム&lt;br&gt;&lt;font style=&#39;font-size:10px&#39; color=&#39;#555555&#39;&gt;どのスクリプトにもある仕組み&lt;/font&gt;" vertex="1">
+                    <mxGeometry height="90" width="220" x="40" y="560" as="geometry"/>
+                </mxCell>
+                <mxCell id="btn" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;arcSize=12;fillColor=#FFF3E0;strokeColor=#E65100;" value="&lt;b&gt;Button の On Click()&lt;/b&gt; &lt;font style=&#39;font-size:10px&#39; color=&#39;#555555&#39;&gt;Unity 標準&lt;/font&gt;&lt;br&gt;押されたら、Inspector で&lt;br&gt;決めた関数を呼ぶ" vertex="1">
+                    <mxGeometry height="80" width="220" x="40" y="900" as="geometry"/>
+                </mxCell>
+                <mxCell id="tap" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;arcSize=12;fillColor=#FFEBEE;strokeColor=#C62828;" value="&lt;b&gt;MochisukeTap.cs&lt;/b&gt;&lt;br&gt;&lt;font style=&#39;font-size:10px&#39; color=&#39;#555555&#39;&gt;付いている物：Mochisuke&lt;/font&gt;&lt;br&gt;タップでもちを増やし、&lt;br&gt;旅を進める" vertex="1">
+                    <mxGeometry height="84" width="240" x="340" y="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="autoinc" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;arcSize=12;fillColor=#E3F2FD;strokeColor=#1565C0;" value="&lt;b&gt;AutoIncome.cs&lt;/b&gt;&lt;br&gt;&lt;font style=&#39;font-size:10px&#39; color=&#39;#555555&#39;&gt;付いている物：AutoIncome&lt;/font&gt;&lt;br&gt;毎フレーム、自動で&lt;br&gt;もちを増やし、旅を進める" vertex="1">
+                    <mxGeometry height="84" width="240" x="340" y="330" as="geometry"/>
+                </mxCell>
+                <mxCell id="ui_mps" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#F1F8E9;strokeColor=#558B2F;" value="MpsText &lt;font style=&#39;font-size:10px&#39; color=&#39;#555555&#39;&gt;TMP_Text&lt;/font&gt;" vertex="1">
+                    <mxGeometry height="44" width="200" x="360" y="460" as="geometry"/>
+                </mxCell>
+                <mxCell id="fmt" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;arcSize=12;fillColor=#F3E5F5;strokeColor=#6A1B9A;" value="&lt;b&gt;MochiFormat.cs&lt;/b&gt;&lt;br&gt;&lt;font style=&#39;font-size:10px&#39; color=&#39;#555555&#39;&gt;static：シーンに置かない道具&lt;/font&gt;&lt;br&gt;数を表示用の文字に直す" vertex="1">
+                    <mxGeometry height="74" width="240" x="340" y="680" as="geometry"/>
+                </mxCell>
+                <mxCell id="wallet" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;arcSize=12;fillColor=#E3F2FD;strokeColor=#1565C0;" value="&lt;b&gt;MochiWallet.cs&lt;/b&gt;&lt;br&gt;&lt;font style=&#39;font-size:10px&#39; color=&#39;#555555&#39;&gt;付いている物：MochiWallet&lt;/font&gt;&lt;br&gt;今のもち数を持つ" vertex="1">
+                    <mxGeometry height="74" width="260" x="660" y="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="shop" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;arcSize=12;fillColor=#E3F2FD;strokeColor=#1565C0;" value="&lt;b&gt;OmiyageShop.cs&lt;/b&gt;&lt;br&gt;&lt;font style=&#39;font-size:10px&#39; color=&#39;#555555&#39;&gt;付いている物：OmiyageShop&lt;/font&gt;&lt;br&gt;おみやげのレベル・値段・&lt;br&gt;タップ力・自動増加量" vertex="1">
+                    <mxGeometry height="84" width="260" x="660" y="240" as="geometry"/>
+                </mxCell>
+                <mxCell id="prog" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;arcSize=12;fillColor=#E3F2FD;strokeColor=#1565C0;" value="&lt;b&gt;StageProgress.cs&lt;/b&gt;&lt;br&gt;&lt;font style=&#39;font-size:10px&#39; color=&#39;#555555&#39;&gt;付いている物：StageProgress&lt;/font&gt;&lt;br&gt;旅の進み具合と、今いる県" vertex="1">
+                    <mxGeometry height="74" width="260" x="660" y="400" as="geometry"/>
+                </mxCell>
+                <mxCell id="ui_prog" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#F1F8E9;strokeColor=#558B2F;" value="ProgressBar の Fill &lt;font style=&#39;font-size:10px&#39; color=&#39;#555555&#39;&gt;Image（Filled）&lt;/font&gt;&lt;br&gt;ProgressText &lt;font style=&#39;font-size:10px&#39; color=&#39;#555555&#39;&gt;TMP_Text&lt;/font&gt;" vertex="1">
+                    <mxGeometry height="56" width="240" x="340" y="560" as="geometry"/>
+                </mxCell>
+                <mxCell id="data" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;size=10;fontSize=12;fillColor=#EFEBE9;strokeColor=#6D4C41;" value="&lt;b&gt;StageDatabase.asset&lt;/b&gt;&lt;br&gt;&lt;font style=&#39;font-size:10px&#39; color=&#39;#555555&#39;&gt;ScriptableObject&lt;/font&gt;&lt;br&gt;47県の名前・距離・背景・&lt;br&gt;おみやげ・日記&lt;br&gt;&lt;font style=&#39;font-size:10px&#39; color=&#39;#555555&#39;&gt;中身の形は StageDatabase.cs の StageData&lt;/font&gt;" vertex="1">
+                    <mxGeometry height="150" width="260" x="1000" y="170" as="geometry"/>
+                </mxCell>
+                <mxCell id="view" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;arcSize=12;fillColor=#FFF8E1;strokeColor=#F9A825;" value="&lt;b&gt;StageView.cs&lt;/b&gt;&lt;br&gt;&lt;font style=&#39;font-size:10px&#39; color=&#39;#555555&#39;&gt;付いている物：StageView&lt;/font&gt;&lt;br&gt;背景と県名を出す" vertex="1">
+                    <mxGeometry height="74" width="260" x="1000" y="400" as="geometry"/>
+                </mxCell>
+                <mxCell id="shelf" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;arcSize=12;fillColor=#FFF8E1;strokeColor=#F9A825;" value="&lt;b&gt;OmiyageShelf.cs&lt;/b&gt;&lt;br&gt;&lt;font style=&#39;font-size:10px&#39; color=&#39;#555555&#39;&gt;付いている物：ShopPanel&lt;/font&gt;&lt;br&gt;棚の9マス・ページ・詳細パネル&lt;br&gt;&lt;font style=&#39;font-size:10px&#39; color=&#39;#555555&#39;&gt;MochiWallet の Mochi も読む&lt;/font&gt;" vertex="1">
+                    <mxGeometry height="84" width="260" x="1000" y="660" as="geometry"/>
+                </mxCell>
+                <mxCell id="slot" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;arcSize=12;fillColor=#FFF8E1;strokeColor=#F9A825;" value="&lt;b&gt;OmiyageSlot.cs（9個）&lt;/b&gt;&lt;br&gt;&lt;font style=&#39;font-size:10px&#39; color=&#39;#555555&#39;&gt;付いている物：Slot0〜Slot8&lt;/font&gt;&lt;br&gt;棚の1マス" vertex="1">
+                    <mxGeometry height="74" width="260" x="1000" y="900" as="geometry"/>
+                </mxCell>
+                <mxCell id="ui_count" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#F1F8E9;strokeColor=#558B2F;" value="MochiCount &lt;font style=&#39;font-size:10px&#39; color=&#39;#555555&#39;&gt;TMP_Text&lt;/font&gt;" vertex="1">
+                    <mxGeometry height="50" width="280" x="1340" y="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="ui_bg" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#F1F8E9;strokeColor=#558B2F;" value="Background &lt;font style=&#39;font-size:10px&#39; color=&#39;#555555&#39;&gt;Image ＋ AspectRatioFitter&lt;/font&gt;&lt;br&gt;StageName &lt;font style=&#39;font-size:10px&#39; color=&#39;#555555&#39;&gt;TMP_Text&lt;/font&gt;" vertex="1">
+                    <mxGeometry height="56" width="280" x="1340" y="409" as="geometry"/>
+                </mxCell>
+                <mxCell id="ui_shop" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#F1F8E9;strokeColor=#558B2F;" value="&lt;b&gt;ShopPanel&lt;/b&gt;（開く・閉じる）&lt;br&gt;DetailPanel・DetailImage&lt;br&gt;DetailName・DetailEffect&lt;br&gt;BuyButton の Text (TMP)&lt;br&gt;MoneyText・PageText" vertex="1">
+                    <mxGeometry height="124" width="280" x="1340" y="640" as="geometry"/>
+                </mxCell>
+                <mxCell id="ui_slot" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#F1F8E9;strokeColor=#558B2F;" value="Slot0〜8 の中&lt;br&gt;Item・Lock・名札・Button" vertex="1">
+                    <mxGeometry height="56" width="280" x="1340" y="909" as="geometry"/>
+                </mxCell>
+                <mxCell id="c2" edge="1" parent="1" source="evt" style="edgeStyle=none;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;strokeColor=#E65100;strokeWidth=2;" target="tap" value="タップ → OnPointerDown()">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="c3" edge="1" parent="1" source="evt" style="edgeStyle=none;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;strokeColor=#E65100;strokeWidth=2;" target="start" value="タップ →&lt;br&gt;OnPointerDown()">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="c4" edge="1" parent="1" source="btn" style="edgeStyle=none;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;strokeColor=#E65100;strokeWidth=2;" target="slot" value="OnClick()">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="c5" edge="1" parent="1" source="btn" style="edgeStyle=none;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;strokeColor=#E65100;strokeWidth=2;" target="shelf" value="OnClickBuy()・OnClickNext/PrevPage()&lt;br&gt;SetActive()：IdouButton・BackButton で&lt;br&gt;ShopPanel を開け閉め">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="c6" edge="1" parent="1" source="tap" style="edgeStyle=none;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;strokeColor=#37474F;" target="wallet" value="Add()">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="c7" edge="1" parent="1" source="tap" style="edgeStyle=none;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;strokeColor=#78909C;dashed=1;" target="shop" value="TapPower">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="c8" edge="1" parent="1" source="tap" style="edgeStyle=none;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;strokeColor=#37474F;" target="prog" value="AddProgress()">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="c9" edge="1" parent="1" source="autoinc" style="edgeStyle=none;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;strokeColor=#37474F;" target="wallet" value="Add()">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="c10" edge="1" parent="1" source="autoinc" style="edgeStyle=none;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;strokeColor=#78909C;dashed=1;" target="shop" value="Mps">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="c11" edge="1" parent="1" source="autoinc" style="edgeStyle=none;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;strokeColor=#37474F;" target="prog" value="AddProgress()">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="c12" edge="1" parent="1" source="shop" style="edgeStyle=none;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;strokeColor=#37474F;" target="wallet" value="TrySpend()">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="c13" edge="1" parent="1" source="prog" style="edgeStyle=none;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;strokeColor=#37474F;" target="view" value="ShowStage()">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="c14" edge="1" parent="1" source="shelf" style="edgeStyle=none;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;strokeColor=#37474F;edgeStyle=orthogonalEdgeStyle;rounded=1;exitX=0;exitY=0.25;entryX=1;entryY=0.7;" target="shop" value="GetLevel()・GetPrice()&lt;br&gt;TryBuy()">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="c15" edge="1" parent="1" source="shelf" style="edgeStyle=none;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;strokeColor=#78909C;dashed=1;" target="prog" value="CurrentStageIndex">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="c16" edge="1" parent="1" source="shelf" style="edgeStyle=none;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;strokeColor=#37474F;exitX=0.35;exitY=1;entryX=0.35;entryY=0;" target="slot" value="Setup()・Show〜()">
+                    <mxGeometry relative="1" x="-0.45" as="geometry"/>
+                </mxCell>
+                <mxCell id="c17" edge="1" parent="1" source="slot" style="edgeStyle=none;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;strokeColor=#37474F;exitX=0.65;exitY=0;entryX=0.65;entryY=1;" target="shelf" value="OnSlotClicked()">
+                    <mxGeometry relative="1" x="-0.45" as="geometry"/>
+                </mxCell>
+                <mxCell id="c18" edge="1" parent="1" source="wallet" style="edgeStyle=none;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;strokeColor=#37474F;strokeColor=#6A1B9A;edgeStyle=orthogonalEdgeStyle;rounded=1;exitX=0;exitY=0.75;entryX=1;entryY=0.25;" target="fmt" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="c19" edge="1" parent="1" source="autoinc" style="edgeStyle=none;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;strokeColor=#37474F;strokeColor=#6A1B9A;edgeStyle=orthogonalEdgeStyle;rounded=1;exitX=0;exitY=0.7;entryX=0;entryY=0.5;" target="fmt" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="c20" edge="1" parent="1" source="prog" style="edgeStyle=none;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;strokeColor=#37474F;strokeColor=#6A1B9A;" target="fmt" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="c21" edge="1" parent="1" source="shelf" style="edgeStyle=none;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;strokeColor=#37474F;strokeColor=#6A1B9A;" target="fmt" value="Format()">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="c22" edge="1" parent="1" source="start" style="edgeStyle=none;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;strokeColor=#558B2F;" target="ui_start" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="c23" edge="1" parent="1" source="wallet" style="edgeStyle=none;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;strokeColor=#558B2F;" target="ui_count" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="c24" edge="1" parent="1" source="autoinc" style="edgeStyle=none;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;strokeColor=#558B2F;" target="ui_mps" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="c25" edge="1" parent="1" source="prog" style="edgeStyle=none;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;strokeColor=#558B2F;" target="ui_prog" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="c26" edge="1" parent="1" source="view" style="edgeStyle=none;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;strokeColor=#558B2F;" target="ui_bg" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="c27" edge="1" parent="1" source="shelf" style="edgeStyle=none;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;strokeColor=#558B2F;" target="ui_shop" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="c28" edge="1" parent="1" source="slot" style="edgeStyle=none;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;strokeColor=#558B2F;" target="ui_slot" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="c29" edge="1" parent="1" source="data" style="edgeStyle=none;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;strokeColor=#6D4C41;dashed=1;" target="shop" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="c30" edge="1" parent="1" source="data" style="edgeStyle=none;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;strokeColor=#6D4C41;dashed=1;" target="prog" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="c31" edge="1" parent="1" source="data" style="edgeStyle=none;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;strokeColor=#6D4C41;dashed=1;" target="view" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="c32" edge="1" parent="1" source="data" style="edgeStyle=none;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;strokeColor=#6D4C41;dashed=1;edgeStyle=orthogonalEdgeStyle;rounded=1;exitX=1;exitY=0.8;entryX=1;entryY=0.3;" target="shelf" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="c33" parent="1" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontSize=12;" value="&lt;b&gt;見かた&lt;/b&gt;" vertex="1">
+                    <mxGeometry height="24" width="330" x="1700" y="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="c34" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;arcSize=12;fillColor=#FFF3E0;strokeColor=#E65100;" value="" vertex="1">
+                    <mxGeometry height="22" width="40" x="1700" y="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="c35" parent="1" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontSize=12;verticalAlign=middle;" value="Unity 本体の仕組み" vertex="1">
+                    <mxGeometry height="26" width="280" x="1750" y="138" as="geometry"/>
+                </mxCell>
+                <mxCell id="c36" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;arcSize=12;fillColor=#FFEBEE;strokeColor=#C62828;" value="" vertex="1">
+                    <mxGeometry height="22" width="40" x="1700" y="170" as="geometry"/>
+                </mxCell>
+                <mxCell id="c37" parent="1" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontSize=12;verticalAlign=middle;" value="入力：プレイヤーの操作を受け取る" vertex="1">
+                    <mxGeometry height="26" width="280" x="1750" y="168" as="geometry"/>
+                </mxCell>
+                <mxCell id="c38" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;arcSize=12;fillColor=#E3F2FD;strokeColor=#1565C0;" value="" vertex="1">
+                    <mxGeometry height="22" width="40" x="1700" y="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="c39" parent="1" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontSize=12;verticalAlign=middle;" value="状態・計算：数を持つ、計算する" vertex="1">
+                    <mxGeometry height="26" width="280" x="1750" y="198" as="geometry"/>
+                </mxCell>
+                <mxCell id="c40" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;arcSize=12;fillColor=#FFF8E1;strokeColor=#F9A825;" value="" vertex="1">
+                    <mxGeometry height="22" width="40" x="1700" y="230" as="geometry"/>
+                </mxCell>
+                <mxCell id="c41" parent="1" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontSize=12;verticalAlign=middle;" value="表示：画面に出すものを決める" vertex="1">
+                    <mxGeometry height="26" width="280" x="1750" y="228" as="geometry"/>
+                </mxCell>
+                <mxCell id="c42" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;arcSize=12;fillColor=#F3E5F5;strokeColor=#6A1B9A;" value="" vertex="1">
+                    <mxGeometry height="22" width="40" x="1700" y="260" as="geometry"/>
+                </mxCell>
+                <mxCell id="c43" parent="1" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontSize=12;verticalAlign=middle;" value="道具：どこからでも使う" vertex="1">
+                    <mxGeometry height="26" width="280" x="1750" y="258" as="geometry"/>
+                </mxCell>
+                <mxCell id="c44" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;arcSize=12;rounded=0;fillColor=#F1F8E9;strokeColor=#558B2F;" value="" vertex="1">
+                    <mxGeometry height="22" width="40" x="1700" y="290" as="geometry"/>
+                </mxCell>
+                <mxCell id="c45" parent="1" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontSize=12;verticalAlign=middle;" value="画面の部品（Hierarchy の物）" vertex="1">
+                    <mxGeometry height="26" width="280" x="1750" y="288" as="geometry"/>
+                </mxCell>
+                <mxCell id="c46" parent="1" style="text;html=1;" value="" vertex="1">
+                    <mxGeometry height="1" width="1" x="1700" y="331" as="geometry"/>
+                </mxCell>
+                <mxCell id="c47" parent="1" style="text;html=1;" value="" vertex="1">
+                    <mxGeometry height="1" width="1" x="1740" y="331" as="geometry"/>
+                </mxCell>
+                <mxCell id="c48" edge="1" parent="1" source="c46" style="edgeStyle=none;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;strokeColor=#E65100;strokeWidth=2;" target="c47">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="c49" parent="1" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontSize=12;verticalAlign=middle;" value="Unity がスクリプトの関数を呼ぶ" vertex="1">
+                    <mxGeometry height="26" width="280" x="1750" y="318" as="geometry"/>
+                </mxCell>
+                <mxCell id="c50" parent="1" style="text;html=1;" value="" vertex="1">
+                    <mxGeometry height="1" width="1" x="1700" y="361" as="geometry"/>
+                </mxCell>
+                <mxCell id="c51" parent="1" style="text;html=1;" value="" vertex="1">
+                    <mxGeometry height="1" width="1" x="1740" y="361" as="geometry"/>
+                </mxCell>
+                <mxCell id="c52" edge="1" parent="1" source="c50" style="edgeStyle=none;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;strokeColor=#37474F;" target="c51">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="c53" parent="1" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontSize=12;verticalAlign=middle;" value="ほかのファイルの関数を呼ぶ" vertex="1">
+                    <mxGeometry height="26" width="280" x="1750" y="348" as="geometry"/>
+                </mxCell>
+                <mxCell id="c54" parent="1" style="text;html=1;" value="" vertex="1">
+                    <mxGeometry height="1" width="1" x="1700" y="391" as="geometry"/>
+                </mxCell>
+                <mxCell id="c55" parent="1" style="text;html=1;" value="" vertex="1">
+                    <mxGeometry height="1" width="1" x="1740" y="391" as="geometry"/>
+                </mxCell>
+                <mxCell id="c56" edge="1" parent="1" source="c54" style="edgeStyle=none;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;strokeColor=#78909C;dashed=1;" target="c55">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="c57" parent="1" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontSize=12;verticalAlign=middle;" value="値を読むだけ（プロパティ）" vertex="1">
+                    <mxGeometry height="26" width="280" x="1750" y="378" as="geometry"/>
+                </mxCell>
+                <mxCell id="c58" parent="1" style="text;html=1;" value="" vertex="1">
+                    <mxGeometry height="1" width="1" x="1700" y="421" as="geometry"/>
+                </mxCell>
+                <mxCell id="c59" parent="1" style="text;html=1;" value="" vertex="1">
+                    <mxGeometry height="1" width="1" x="1740" y="421" as="geometry"/>
+                </mxCell>
+                <mxCell id="c60" edge="1" parent="1" source="c58" style="edgeStyle=none;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;strokeColor=#558B2F;" target="c59">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="c61" parent="1" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontSize=12;verticalAlign=middle;" value="画面の部品を書き換える" vertex="1">
+                    <mxGeometry height="26" width="280" x="1750" y="408" as="geometry"/>
+                </mxCell>
+                <mxCell id="c62" parent="1" style="text;html=1;" value="" vertex="1">
+                    <mxGeometry height="1" width="1" x="1700" y="451" as="geometry"/>
+                </mxCell>
+                <mxCell id="c63" parent="1" style="text;html=1;" value="" vertex="1">
+                    <mxGeometry height="1" width="1" x="1740" y="451" as="geometry"/>
+                </mxCell>
+                <mxCell id="c64" edge="1" parent="1" source="c62" style="edgeStyle=none;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;strokeColor=#6D4C41;dashed=1;" target="c63">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="c65" parent="1" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontSize=12;verticalAlign=middle;" value="データ（stages）を読む" vertex="1">
+                    <mxGeometry height="26" width="280" x="1750" y="438" as="geometry"/>
+                </mxCell>
+                <mxCell id="c66" parent="1" style="text;html=1;" value="" vertex="1">
+                    <mxGeometry height="1" width="1" x="1700" y="481" as="geometry"/>
+                </mxCell>
+                <mxCell id="c67" parent="1" style="text;html=1;" value="" vertex="1">
+                    <mxGeometry height="1" width="1" x="1740" y="481" as="geometry"/>
+                </mxCell>
+                <mxCell id="c68" edge="1" parent="1" source="c66" style="edgeStyle=none;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;strokeColor=#37474F;strokeColor=#6A1B9A;" target="c67">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="c69" parent="1" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontSize=12;verticalAlign=middle;" value="MochiFormat.Format() で文字にする" vertex="1">
+                    <mxGeometry height="26" width="280" x="1750" y="468" as="geometry"/>
+                </mxCell>
+                <mxCell id="c70" parent="1" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontSize=12;" value="矢印の向き＝「頼む側 → 頼まれる側」&lt;br&gt;線の上の文字＝呼ぶ関数・読む値&lt;br&gt;つなぐ相手は、各スクリプトの [SerializeField] に Inspector でドラッグして決めている" vertex="1">
+                    <mxGeometry height="90" width="330" x="1700" y="510" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram name="2 ファイルの中の関数" id="3220e38395e382a1">
+        <mxGraphModel dx="3181" dy="1547" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="c1" parent="1" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;" value="ぷにっかー Unity版：ファイルの中の関数（青い矢印＝同じファイルの中の呼び出し）" vertex="1">
+                    <mxGeometry height="40" width="1400" x="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="L_tap" parent="1" style="swimlane;html=1;whiteSpace=wrap;startSize=44;rounded=1;arcSize=4;fontSize=13;fillColor=#CFD8DC;swimlaneFillColor=#FAFAFA;strokeColor=#455A64;" value="MochisukeTap.cs&lt;br&gt;&lt;font style=&#39;font-size:10px&#39; color=&#39;#555555&#39;&gt;付いている物：Mochisuke&lt;/font&gt;" vertex="1">
+                    <mxGeometry height="161" width="270" x="40" y="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="tap_down" parent="L_tap" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;arcSize=12;fillColor=#FFCDD2;strokeColor=#C62828;verticalAlign=top;spacingTop=4;" value="&lt;b&gt;OnPointerDown(eventData)&lt;/b&gt;&lt;br&gt;&lt;font style=&#39;font-size:10px&#39; color=&#39;#555555&#39;&gt;タップでもちと旅を進める&lt;/font&gt;&lt;div style=&#39;font-size:10px;text-align:left;margin-top:3px&#39;&gt;&lt;font color=&#39;#607D8B&#39;&gt;読む OmiyageShop の TapPower&lt;/font&gt;&lt;br&gt;&lt;font color=&#39;#263238&#39;&gt;→ MochiWallet の Add()&lt;/font&gt;&lt;br&gt;&lt;font color=&#39;#263238&#39;&gt;→ StageProgress の AddProgress()&lt;/font&gt;&lt;/div&gt;" vertex="1">
+                    <mxGeometry height="89" width="240" x="15" y="58" as="geometry"/>
+                </mxCell>
+                <mxCell id="L_auto" parent="1" style="swimlane;html=1;whiteSpace=wrap;startSize=44;rounded=1;arcSize=4;fontSize=13;fillColor=#CFD8DC;swimlaneFillColor=#FAFAFA;strokeColor=#455A64;" value="AutoIncome.cs&lt;br&gt;&lt;font style=&#39;font-size:10px&#39; color=&#39;#555555&#39;&gt;付いている物：AutoIncome&lt;/font&gt;" vertex="1">
+                    <mxGeometry height="191" width="270" x="350" y="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="auto_up" parent="L_auto" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;arcSize=12;fillColor=#FFE0B2;strokeColor=#E65100;verticalAlign=top;spacingTop=4;" value="&lt;b&gt;Update()&lt;/b&gt;&lt;br&gt;&lt;font style=&#39;font-size:10px&#39; color=&#39;#555555&#39;&gt;毎フレーム、自動で増やす&lt;/font&gt;&lt;div style=&#39;font-size:10px;text-align:left;margin-top:3px&#39;&gt;&lt;font color=&#39;#607D8B&#39;&gt;読む OmiyageShop の Mps&lt;/font&gt;&lt;br&gt;&lt;font color=&#39;#263238&#39;&gt;→ MochiWallet の Add()&lt;/font&gt;&lt;br&gt;&lt;font color=&#39;#263238&#39;&gt;→ StageProgress の AddProgress()&lt;/font&gt;&lt;br&gt;&lt;font color=&#39;#263238&#39;&gt;→ MochiFormat の Format()&lt;/font&gt;&lt;br&gt;&lt;font color=&#39;#33691E&#39;&gt;画面 MpsText&lt;/font&gt;&lt;/div&gt;" vertex="1">
+                    <mxGeometry height="119" width="240" x="15" y="58" as="geometry"/>
+                </mxCell>
+                <mxCell id="L_start" parent="1" style="swimlane;html=1;whiteSpace=wrap;startSize=44;rounded=1;arcSize=4;fontSize=13;fillColor=#CFD8DC;swimlaneFillColor=#FAFAFA;strokeColor=#455A64;" value="StartScreen.cs&lt;br&gt;&lt;font style=&#39;font-size:10px&#39; color=&#39;#555555&#39;&gt;付いている物：StartScreen&lt;/font&gt;" vertex="1">
+                    <mxGeometry height="263" width="270" x="660" y="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="st_down" parent="L_start" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;arcSize=12;fillColor=#FFCDD2;strokeColor=#C62828;verticalAlign=top;spacingTop=4;" value="&lt;b&gt;OnPointerDown(eventData)&lt;/b&gt;&lt;br&gt;&lt;font style=&#39;font-size:10px&#39; color=&#39;#555555&#39;&gt;消え始めの合図を出す&lt;/font&gt;&lt;div style=&#39;font-size:10px;text-align:left;margin-top:3px&#39;&gt;&lt;font color=&#39;#33691E&#39;&gt;画面 blocksRaycasts を false に&lt;/font&gt;&lt;/div&gt;" vertex="1">
+                    <mxGeometry height="59" width="240" x="15" y="58" as="geometry"/>
+                </mxCell>
+                <mxCell id="st_up" parent="L_start" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;arcSize=12;fillColor=#FFE0B2;strokeColor=#E65100;verticalAlign=top;spacingTop=4;" value="&lt;b&gt;Update()&lt;/b&gt;&lt;br&gt;&lt;font style=&#39;font-size:10px&#39; color=&#39;#555555&#39;&gt;点滅・消える動き&lt;/font&gt;&lt;div style=&#39;font-size:10px;text-align:left;margin-top:3px&#39;&gt;&lt;font color=&#39;#33691E&#39;&gt;画面 Hint の alpha（点滅）&lt;/font&gt;&lt;br&gt;&lt;font color=&#39;#33691E&#39;&gt;画面 StartScreen の alpha と大きさ&lt;/font&gt;&lt;/div&gt;" vertex="1">
+                    <mxGeometry height="74" width="240" x="15" y="175" as="geometry"/>
+                </mxCell>
+                <mxCell id="L_fmt" parent="1" style="swimlane;html=1;whiteSpace=wrap;startSize=44;rounded=1;arcSize=4;fontSize=13;fillColor=#CFD8DC;swimlaneFillColor=#FAFAFA;strokeColor=#455A64;" value="MochiFormat.cs（static）&lt;br&gt;&lt;font style=&#39;font-size:10px&#39; color=&#39;#555555&#39;&gt;シーンに置かない道具&lt;/font&gt;" vertex="1">
+                    <mxGeometry height="146" width="560" x="970" y="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="f_fmt" parent="L_fmt" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;arcSize=12;fillColor=#FFFFFF;strokeColor=#455A64;verticalAlign=top;spacingTop=4;" value="&lt;b&gt;Format(n)&lt;/b&gt;&lt;br&gt;&lt;font style=&#39;font-size:10px&#39; color=&#39;#555555&#39;&gt;数 → 表示用の文字&lt;/font&gt;&lt;div style=&#39;font-size:10px;text-align:left;margin-top:3px&#39;&gt;&lt;font color=&#39;#BF360C&#39;&gt;← MochiWallet・AutoIncome&lt;/font&gt;&lt;br&gt;&lt;font color=&#39;#BF360C&#39;&gt;← StageProgress・OmiyageShelf&lt;/font&gt;&lt;/div&gt;" vertex="1">
+                    <mxGeometry height="74" width="240" x="15" y="58" as="geometry"/>
+                </mxCell>
+                <mxCell id="f_unit" parent="L_fmt" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;arcSize=12;fillColor=#FFFFFF;strokeColor=#455A64;verticalAlign=top;spacingTop=4;" value="&lt;b&gt;WithUnit(n, unit, unitName)&lt;/b&gt;&lt;br&gt;&lt;font style=&#39;font-size:10px&#39; color=&#39;#555555&#39;&gt;単位で割って、小数6桁＋単位&lt;/font&gt;" vertex="1">
+                    <mxGeometry height="44" width="240" x="305" y="58" as="geometry"/>
+                </mxCell>
+                <mxCell id="L_wallet" parent="1" style="swimlane;html=1;whiteSpace=wrap;startSize=44;rounded=1;arcSize=4;fontSize=13;fillColor=#CFD8DC;swimlaneFillColor=#FAFAFA;strokeColor=#455A64;" value="MochiWallet.cs&lt;br&gt;&lt;font style=&#39;font-size:10px&#39; color=&#39;#555555&#39;&gt;付いている物：MochiWallet&lt;/font&gt;" vertex="1">
+                    <mxGeometry height="347" width="560" x="40" y="360" as="geometry"/>
+                </mxCell>
+                <mxCell id="w_start" parent="L_wallet" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;arcSize=12;fillColor=#FFE0B2;strokeColor=#E65100;verticalAlign=top;spacingTop=4;" value="&lt;b&gt;Start()&lt;/b&gt;&lt;br&gt;&lt;font style=&#39;font-size:10px&#39; color=&#39;#555555&#39;&gt;最初の表示&lt;/font&gt;" vertex="1">
+                    <mxGeometry height="44" width="240" x="15" y="58" as="geometry"/>
+                </mxCell>
+                <mxCell id="w_add" parent="L_wallet" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;arcSize=12;fillColor=#FFFFFF;strokeColor=#455A64;verticalAlign=top;spacingTop=4;" value="&lt;b&gt;Add(amount)&lt;/b&gt;&lt;br&gt;&lt;font style=&#39;font-size:10px&#39; color=&#39;#555555&#39;&gt;もちを amount だけ増やす&lt;/font&gt;&lt;div style=&#39;font-size:10px;text-align:left;margin-top:3px&#39;&gt;&lt;font color=&#39;#BF360C&#39;&gt;← MochisukeTap・AutoIncome&lt;/font&gt;&lt;/div&gt;" vertex="1">
+                    <mxGeometry height="59" width="240" x="15" y="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="w_spend" parent="L_wallet" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;arcSize=12;fillColor=#FFFFFF;strokeColor=#455A64;verticalAlign=top;spacingTop=4;" value="&lt;b&gt;TrySpend(amount)&lt;/b&gt;&lt;br&gt;&lt;font style=&#39;font-size:10px&#39; color=&#39;#555555&#39;&gt;足りれば払って true&lt;/font&gt;&lt;div style=&#39;font-size:10px;text-align:left;margin-top:3px&#39;&gt;&lt;font color=&#39;#BF360C&#39;&gt;← OmiyageShop の TryBuy()&lt;/font&gt;&lt;/div&gt;" vertex="1">
+                    <mxGeometry height="59" width="240" x="15" y="197" as="geometry"/>
+                </mxCell>
+                <mxCell id="w_mochi" parent="L_wallet" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;arcSize=12;fillColor=#ECEFF1;strokeColor=#78909C;dashed=1;fontStyle=2;verticalAlign=top;spacingTop=4;" value="&lt;b&gt;Mochi&lt;/b&gt;&lt;br&gt;&lt;font style=&#39;font-size:10px&#39; color=&#39;#555555&#39;&gt;今のもち数（プロパティ）&lt;/font&gt;&lt;div style=&#39;font-size:10px;text-align:left;margin-top:3px&#39;&gt;&lt;font color=&#39;#BF360C&#39;&gt;← OmiyageShelf が読む&lt;/font&gt;&lt;/div&gt;" vertex="1">
+                    <mxGeometry height="59" width="240" x="15" y="274" as="geometry"/>
+                </mxCell>
+                <mxCell id="w_text" parent="L_wallet" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;arcSize=12;fillColor=#FFFFFF;strokeColor=#455A64;verticalAlign=top;spacingTop=4;" value="&lt;b&gt;UpdateText()&lt;/b&gt;&lt;br&gt;&lt;font style=&#39;font-size:10px&#39; color=&#39;#555555&#39;&gt;「〇〇 もち」を出す&lt;/font&gt;&lt;div style=&#39;font-size:10px;text-align:left;margin-top:3px&#39;&gt;&lt;font color=&#39;#263238&#39;&gt;→ MochiFormat の Format()&lt;/font&gt;&lt;br&gt;&lt;font color=&#39;#33691E&#39;&gt;画面 MochiCount&lt;/font&gt;&lt;/div&gt;" vertex="1">
+                    <mxGeometry height="74" width="240" x="305" y="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="L_prog" parent="1" style="swimlane;html=1;whiteSpace=wrap;startSize=44;rounded=1;arcSize=4;fontSize=13;fillColor=#CFD8DC;swimlaneFillColor=#FAFAFA;strokeColor=#455A64;" value="StageProgress.cs&lt;br&gt;&lt;font style=&#39;font-size:10px&#39; color=&#39;#555555&#39;&gt;付いている物：StageProgress&lt;/font&gt;" vertex="1">
+                    <mxGeometry height="295" width="560" x="640" y="360" as="geometry"/>
+                </mxCell>
+                <mxCell id="p_start" parent="L_prog" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;arcSize=12;fillColor=#FFE0B2;strokeColor=#E65100;verticalAlign=top;spacingTop=4;" value="&lt;b&gt;Start()&lt;/b&gt;&lt;br&gt;&lt;font style=&#39;font-size:10px&#39; color=&#39;#555555&#39;&gt;最初の県とバーを出す&lt;/font&gt;&lt;div style=&#39;font-size:10px;text-align:left;margin-top:3px&#39;&gt;&lt;font color=&#39;#263238&#39;&gt;→ StageView の ShowStage()&lt;/font&gt;&lt;/div&gt;" vertex="1">
+                    <mxGeometry height="59" width="240" x="15" y="58" as="geometry"/>
+                </mxCell>
+                <mxCell id="p_add" parent="L_prog" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;arcSize=12;fillColor=#FFFFFF;strokeColor=#455A64;verticalAlign=top;spacingTop=4;" value="&lt;b&gt;AddProgress(amount)&lt;/b&gt;&lt;br&gt;&lt;font style=&#39;font-size:10px&#39; color=&#39;#555555&#39;&gt;旅を進める&lt;/font&gt;&lt;div style=&#39;font-size:10px;text-align:left;margin-top:3px&#39;&gt;&lt;font color=&#39;#BF360C&#39;&gt;← MochisukeTap・AutoIncome&lt;/font&gt;&lt;/div&gt;" vertex="1">
+                    <mxGeometry height="59" width="240" x="15" y="135" as="geometry"/>
+                </mxCell>
+                <mxCell id="p_cur" parent="L_prog" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;arcSize=12;fillColor=#ECEFF1;strokeColor=#78909C;dashed=1;fontStyle=2;verticalAlign=top;spacingTop=4;" value="&lt;b&gt;CurrentStageIndex&lt;/b&gt;&lt;br&gt;&lt;font style=&#39;font-size:10px&#39; color=&#39;#555555&#39;&gt;今いる県の番号（プロパティ）&lt;/font&gt;&lt;div style=&#39;font-size:10px;text-align:left;margin-top:3px&#39;&gt;&lt;font color=&#39;#BF360C&#39;&gt;← OmiyageShelf が読む&lt;/font&gt;&lt;/div&gt;" vertex="1">
+                    <mxGeometry height="59" width="240" x="15" y="212" as="geometry"/>
+                </mxCell>
+                <mxCell id="p_view" parent="L_prog" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;arcSize=12;fillColor=#FFFFFF;strokeColor=#455A64;verticalAlign=top;spacingTop=4;" value="&lt;b&gt;UpdateProgressView()&lt;/b&gt;&lt;br&gt;&lt;font style=&#39;font-size:10px&#39; color=&#39;#555555&#39;&gt;バーと「次のエリアまで」&lt;/font&gt;&lt;div style=&#39;font-size:10px;text-align:left;margin-top:3px&#39;&gt;&lt;font color=&#39;#263238&#39;&gt;→ MochiFormat の Format()&lt;/font&gt;&lt;br&gt;&lt;font color=&#39;#33691E&#39;&gt;画面 Fill・ProgressText&lt;/font&gt;&lt;/div&gt;" vertex="1">
+                    <mxGeometry height="74" width="240" x="305" y="58" as="geometry"/>
+                </mxCell>
+                <mxCell id="p_next" parent="L_prog" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;arcSize=12;fillColor=#FFFFFF;strokeColor=#455A64;verticalAlign=top;spacingTop=4;" value="&lt;b&gt;GoNextStage()&lt;/b&gt;&lt;br&gt;&lt;font style=&#39;font-size:10px&#39; color=&#39;#555555&#39;&gt;次の県へ進む／ゴール&lt;/font&gt;&lt;div style=&#39;font-size:10px;text-align:left;margin-top:3px&#39;&gt;&lt;font color=&#39;#263238&#39;&gt;→ StageView の ShowStage()&lt;/font&gt;&lt;/div&gt;" vertex="1">
+                    <mxGeometry height="59" width="240" x="305" y="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="p_last" parent="L_prog" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;arcSize=12;fillColor=#ECEFF1;strokeColor=#78909C;dashed=1;fontStyle=2;verticalAlign=top;spacingTop=4;" value="&lt;b&gt;IsLastStage&lt;/b&gt;&lt;br&gt;&lt;font style=&#39;font-size:10px&#39; color=&#39;#555555&#39;&gt;最後の県か（プロパティ）&lt;/font&gt;" vertex="1">
+                    <mxGeometry height="44" width="240" x="305" y="237" as="geometry"/>
+                </mxCell>
+                <mxCell id="L_shop" parent="1" style="swimlane;html=1;whiteSpace=wrap;startSize=44;rounded=1;arcSize=4;fontSize=13;fillColor=#CFD8DC;swimlaneFillColor=#FAFAFA;strokeColor=#455A64;" value="OmiyageShop.cs&lt;br&gt;&lt;font style=&#39;font-size:10px&#39; color=&#39;#555555&#39;&gt;付いている物：OmiyageShop&lt;/font&gt;" vertex="1">
+                    <mxGeometry height="516" width="270" x="1240" y="360" as="geometry"/>
+                </mxCell>
+                <mxCell id="o_awake" parent="L_shop" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;arcSize=12;fillColor=#FFE0B2;strokeColor=#E65100;verticalAlign=top;spacingTop=4;" value="&lt;b&gt;Awake()&lt;/b&gt;&lt;br&gt;&lt;font style=&#39;font-size:10px&#39; color=&#39;#555555&#39;&gt;県の数だけレベル0を用意&lt;/font&gt;" vertex="1">
+                    <mxGeometry height="44" width="240" x="15" y="58" as="geometry"/>
+                </mxCell>
+                <mxCell id="o_tap" parent="L_shop" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;arcSize=12;fillColor=#ECEFF1;strokeColor=#78909C;dashed=1;fontStyle=2;verticalAlign=top;spacingTop=4;" value="&lt;b&gt;TapPower&lt;/b&gt;&lt;br&gt;&lt;font style=&#39;font-size:10px&#39; color=&#39;#555555&#39;&gt;1＋タップ効果×レベル&lt;/font&gt;&lt;div style=&#39;font-size:10px;text-align:left;margin-top:3px&#39;&gt;&lt;font color=&#39;#BF360C&#39;&gt;← MochisukeTap が読む&lt;/font&gt;&lt;/div&gt;" vertex="1">
+                    <mxGeometry height="59" width="240" x="15" y="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="o_mps" parent="L_shop" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;arcSize=12;fillColor=#ECEFF1;strokeColor=#78909C;dashed=1;fontStyle=2;verticalAlign=top;spacingTop=4;" value="&lt;b&gt;Mps&lt;/b&gt;&lt;br&gt;&lt;font style=&#39;font-size:10px&#39; color=&#39;#555555&#39;&gt;自動増加効果×レベル&lt;/font&gt;&lt;div style=&#39;font-size:10px;text-align:left;margin-top:3px&#39;&gt;&lt;font color=&#39;#BF360C&#39;&gt;← AutoIncome が読む&lt;/font&gt;&lt;/div&gt;" vertex="1">
+                    <mxGeometry height="59" width="240" x="15" y="197" as="geometry"/>
+                </mxCell>
+                <mxCell id="o_level" parent="L_shop" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;arcSize=12;fillColor=#FFFFFF;strokeColor=#455A64;verticalAlign=top;spacingTop=4;" value="&lt;b&gt;GetLevel(index)&lt;/b&gt;&lt;br&gt;&lt;font style=&#39;font-size:10px&#39; color=&#39;#555555&#39;&gt;今のレベル&lt;/font&gt;&lt;div style=&#39;font-size:10px;text-align:left;margin-top:3px&#39;&gt;&lt;font color=&#39;#BF360C&#39;&gt;← OmiyageShelf の UpdateDetail()&lt;/font&gt;&lt;/div&gt;" vertex="1">
+                    <mxGeometry height="59" width="240" x="15" y="274" as="geometry"/>
+                </mxCell>
+                <mxCell id="o_price" parent="L_shop" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;arcSize=12;fillColor=#FFFFFF;strokeColor=#455A64;verticalAlign=top;spacingTop=4;" value="&lt;b&gt;GetPrice(index)&lt;/b&gt;&lt;br&gt;&lt;font style=&#39;font-size:10px&#39; color=&#39;#555555&#39;&gt;次に買う値段&lt;/font&gt;&lt;div style=&#39;font-size:10px;text-align:left;margin-top:3px&#39;&gt;&lt;font color=&#39;#BF360C&#39;&gt;← OmiyageShelf の UpdateDetail()&lt;/font&gt;&lt;/div&gt;" vertex="1">
+                    <mxGeometry height="59" width="240" x="15" y="351" as="geometry"/>
+                </mxCell>
+                <mxCell id="o_buy" parent="L_shop" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;arcSize=12;fillColor=#FFFFFF;strokeColor=#455A64;verticalAlign=top;spacingTop=4;" value="&lt;b&gt;TryBuy(index)&lt;/b&gt;&lt;br&gt;&lt;font style=&#39;font-size:10px&#39; color=&#39;#555555&#39;&gt;払えたらレベル+1&lt;/font&gt;&lt;div style=&#39;font-size:10px;text-align:left;margin-top:3px&#39;&gt;&lt;font color=&#39;#BF360C&#39;&gt;← OmiyageShelf の OnClickBuy()&lt;/font&gt;&lt;br&gt;&lt;font color=&#39;#263238&#39;&gt;→ MochiWallet の TrySpend()&lt;/font&gt;&lt;/div&gt;" vertex="1">
+                    <mxGeometry height="74" width="240" x="15" y="428" as="geometry"/>
+                </mxCell>
+                <mxCell id="L_shelf" parent="1" style="swimlane;html=1;whiteSpace=wrap;startSize=44;rounded=1;arcSize=4;fontSize=13;fillColor=#CFD8DC;swimlaneFillColor=#FAFAFA;strokeColor=#455A64;" value="OmiyageShelf.cs&lt;br&gt;&lt;font style=&#39;font-size:10px&#39; color=&#39;#555555&#39;&gt;付いている物：ShopPanel（開いている間だけ動く）&lt;/font&gt;" vertex="1">
+                    <mxGeometry height="556" width="560" x="40" y="960" as="geometry"/>
+                </mxCell>
+                <mxCell id="sh_start" parent="L_shelf" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;arcSize=12;fillColor=#FFE0B2;strokeColor=#E65100;verticalAlign=top;spacingTop=4;" value="&lt;b&gt;Start()&lt;/b&gt;&lt;br&gt;&lt;font style=&#39;font-size:10px&#39; color=&#39;#555555&#39;&gt;9マスに番号を教える&lt;/font&gt;&lt;div style=&#39;font-size:10px;text-align:left;margin-top:3px&#39;&gt;&lt;font color=&#39;#263238&#39;&gt;→ OmiyageSlot の Setup() ×9&lt;/font&gt;&lt;/div&gt;" vertex="1">
+                    <mxGeometry height="59" width="240" x="15" y="58" as="geometry"/>
+                </mxCell>
+                <mxCell id="sh_up" parent="L_shelf" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;arcSize=12;fillColor=#FFE0B2;strokeColor=#E65100;verticalAlign=top;spacingTop=4;" value="&lt;b&gt;Update()&lt;/b&gt;&lt;br&gt;&lt;font style=&#39;font-size:10px&#39; color=&#39;#555555&#39;&gt;毎フレーム、画面を合わせる&lt;/font&gt;&lt;div style=&#39;font-size:10px;text-align:left;margin-top:3px&#39;&gt;&lt;font color=&#39;#263238&#39;&gt;→ MochiFormat の Format()&lt;/font&gt;&lt;br&gt;&lt;font color=&#39;#607D8B&#39;&gt;読む MochiWallet の Mochi&lt;/font&gt;&lt;br&gt;&lt;font color=&#39;#33691E&#39;&gt;画面 MoneyText・PageText&lt;/font&gt;&lt;/div&gt;" vertex="1">
+                    <mxGeometry height="89" width="240" x="15" y="135" as="geometry"/>
+                </mxCell>
+                <mxCell id="sh_buy" parent="L_shelf" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;arcSize=12;fillColor=#E1BEE7;strokeColor=#6A1B9A;verticalAlign=top;spacingTop=4;" value="&lt;b&gt;OnClickBuy()&lt;/b&gt;&lt;br&gt;&lt;font style=&#39;font-size:10px&#39; color=&#39;#555555&#39;&gt;購入ボタン&lt;/font&gt;&lt;div style=&#39;font-size:10px;text-align:left;margin-top:3px&#39;&gt;&lt;font color=&#39;#263238&#39;&gt;→ OmiyageShop の TryBuy()&lt;/font&gt;&lt;/div&gt;" vertex="1">
+                    <mxGeometry height="59" width="240" x="15" y="262" as="geometry"/>
+                </mxCell>
+                <mxCell id="sh_clicked" parent="L_shelf" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;arcSize=12;fillColor=#FFFFFF;strokeColor=#455A64;verticalAlign=top;spacingTop=4;" value="&lt;b&gt;OnSlotClicked(slotNumber)&lt;/b&gt;&lt;br&gt;&lt;font style=&#39;font-size:10px&#39; color=&#39;#555555&#39;&gt;押されたマスのおみやげを選ぶ&lt;/font&gt;&lt;div style=&#39;font-size:10px;text-align:left;margin-top:3px&#39;&gt;&lt;font color=&#39;#BF360C&#39;&gt;← OmiyageSlot の OnClick()&lt;/font&gt;&lt;/div&gt;" vertex="1">
+                    <mxGeometry height="59" width="240" x="15" y="339" as="geometry"/>
+                </mxCell>
+                <mxCell id="sh_next" parent="L_shelf" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;arcSize=12;fillColor=#E1BEE7;strokeColor=#6A1B9A;verticalAlign=top;spacingTop=4;" value="&lt;b&gt;OnClickNextPage()&lt;/b&gt;&lt;br&gt;&lt;font style=&#39;font-size:10px&#39; color=&#39;#555555&#39;&gt;＞ ボタン&lt;/font&gt;" vertex="1">
+                    <mxGeometry height="44" width="240" x="15" y="436" as="geometry"/>
+                </mxCell>
+                <mxCell id="sh_prev" parent="L_shelf" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;arcSize=12;fillColor=#E1BEE7;strokeColor=#6A1B9A;verticalAlign=top;spacingTop=4;" value="&lt;b&gt;OnClickPrevPage()&lt;/b&gt;&lt;br&gt;&lt;font style=&#39;font-size:10px&#39; color=&#39;#555555&#39;&gt;＜ ボタン&lt;/font&gt;" vertex="1">
+                    <mxGeometry height="44" width="240" x="15" y="498" as="geometry"/>
+                </mxCell>
+                <mxCell id="sh_slots" parent="L_shelf" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;arcSize=12;fillColor=#FFFFFF;strokeColor=#455A64;verticalAlign=top;spacingTop=4;" value="&lt;b&gt;UpdateSlots()&lt;/b&gt;&lt;br&gt;&lt;font style=&#39;font-size:10px&#39; color=&#39;#555555&#39;&gt;9マスに今のページを出す&lt;/font&gt;&lt;div style=&#39;font-size:10px;text-align:left;margin-top:3px&#39;&gt;&lt;font color=&#39;#607D8B&#39;&gt;読む StageProgress の CurrentStageIndex&lt;/font&gt;&lt;br&gt;&lt;font color=&#39;#263238&#39;&gt;→ OmiyageSlot の ShowEmpty()&lt;/font&gt;&lt;br&gt;&lt;font color=&#39;#263238&#39;&gt;→ OmiyageSlot の ShowLocked()&lt;/font&gt;&lt;br&gt;&lt;font color=&#39;#263238&#39;&gt;→ OmiyageSlot の ShowItem()&lt;/font&gt;&lt;/div&gt;" vertex="1">
+                    <mxGeometry height="104" width="240" x="305" y="58" as="geometry"/>
+                </mxCell>
+                <mxCell id="sh_detail" parent="L_shelf" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;arcSize=12;fillColor=#FFFFFF;strokeColor=#455A64;verticalAlign=top;spacingTop=4;" value="&lt;b&gt;UpdateDetail()&lt;/b&gt;&lt;br&gt;&lt;font style=&#39;font-size:10px&#39; color=&#39;#555555&#39;&gt;詳細パネルを出す&lt;/font&gt;&lt;div style=&#39;font-size:10px;text-align:left;margin-top:3px&#39;&gt;&lt;font color=&#39;#263238&#39;&gt;→ OmiyageShop の GetLevel()・GetPrice()&lt;/font&gt;&lt;br&gt;&lt;font color=&#39;#263238&#39;&gt;→ MochiFormat の Format()&lt;/font&gt;&lt;br&gt;&lt;font color=&#39;#607D8B&#39;&gt;読む MochiWallet の Mochi&lt;/font&gt;&lt;br&gt;&lt;font color=&#39;#33691E&#39;&gt;画面 DetailPanel・BuyButton など&lt;/font&gt;&lt;/div&gt;" vertex="1">
+                    <mxGeometry height="104" width="240" x="305" y="180" as="geometry"/>
+                </mxCell>
+                <mxCell id="sh_max" parent="L_shelf" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;arcSize=12;fillColor=#ECEFF1;strokeColor=#78909C;dashed=1;fontStyle=2;verticalAlign=top;spacingTop=4;" value="&lt;b&gt;MaxPage&lt;/b&gt;&lt;br&gt;&lt;font style=&#39;font-size:10px&#39; color=&#39;#555555&#39;&gt;最後のページの番号（プロパティ）&lt;/font&gt;" vertex="1">
+                    <mxGeometry height="44" width="240" x="305" y="310" as="geometry"/>
+                </mxCell>
+                <mxCell id="sh_change" parent="L_shelf" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;arcSize=12;fillColor=#FFFFFF;strokeColor=#455A64;verticalAlign=top;spacingTop=4;" value="&lt;b&gt;ChangePage(direction)&lt;/b&gt;&lt;br&gt;&lt;font style=&#39;font-size:10px&#39; color=&#39;#555555&#39;&gt;ページを進める・戻す&lt;/font&gt;" vertex="1">
+                    <mxGeometry height="44" width="240" x="305" y="466" as="geometry"/>
+                </mxCell>
+                <mxCell id="L_slot" parent="1" style="swimlane;html=1;whiteSpace=wrap;startSize=44;rounded=1;arcSize=4;fontSize=13;fillColor=#CFD8DC;swimlaneFillColor=#FAFAFA;strokeColor=#455A64;" value="OmiyageSlot.cs（9個）&lt;br&gt;&lt;font style=&#39;font-size:10px&#39; color=&#39;#555555&#39;&gt;付いている物：Slot0〜Slot8&lt;/font&gt;" vertex="1">
+                    <mxGeometry height="439" width="270" x="640" y="960" as="geometry"/>
+                </mxCell>
+                <mxCell id="sl_setup" parent="L_slot" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;arcSize=12;fillColor=#FFFFFF;strokeColor=#455A64;verticalAlign=top;spacingTop=4;" value="&lt;b&gt;Setup(ownerShelf, number)&lt;/b&gt;&lt;br&gt;&lt;font style=&#39;font-size:10px&#39; color=&#39;#555555&#39;&gt;連絡先の棚と番号をしまう&lt;/font&gt;&lt;div style=&#39;font-size:10px;text-align:left;margin-top:3px&#39;&gt;&lt;font color=&#39;#BF360C&#39;&gt;← OmiyageShelf の Start()&lt;/font&gt;&lt;/div&gt;" vertex="1">
+                    <mxGeometry height="59" width="240" x="15" y="58" as="geometry"/>
+                </mxCell>
+                <mxCell id="sl_item" parent="L_slot" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;arcSize=12;fillColor=#FFFFFF;strokeColor=#455A64;verticalAlign=top;spacingTop=4;" value="&lt;b&gt;ShowItem(itemImg, itemName)&lt;/b&gt;&lt;br&gt;&lt;font style=&#39;font-size:10px&#39; color=&#39;#555555&#39;&gt;画像と名札を出す&lt;/font&gt;&lt;div style=&#39;font-size:10px;text-align:left;margin-top:3px&#39;&gt;&lt;font color=&#39;#33691E&#39;&gt;画面 Item・名札・Button&lt;/font&gt;&lt;/div&gt;" vertex="1">
+                    <mxGeometry height="59" width="240" x="15" y="135" as="geometry"/>
+                </mxCell>
+                <mxCell id="sl_lock" parent="L_slot" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;arcSize=12;fillColor=#FFFFFF;strokeColor=#455A64;verticalAlign=top;spacingTop=4;" value="&lt;b&gt;ShowLocked()&lt;/b&gt;&lt;br&gt;&lt;font style=&#39;font-size:10px&#39; color=&#39;#555555&#39;&gt;「？」と「？？？」&lt;/font&gt;&lt;div style=&#39;font-size:10px;text-align:left;margin-top:3px&#39;&gt;&lt;font color=&#39;#33691E&#39;&gt;画面 Lock・名札・Button&lt;/font&gt;&lt;/div&gt;" vertex="1">
+                    <mxGeometry height="59" width="240" x="15" y="212" as="geometry"/>
+                </mxCell>
+                <mxCell id="sl_empty" parent="L_slot" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;arcSize=12;fillColor=#FFFFFF;strokeColor=#455A64;verticalAlign=top;spacingTop=4;" value="&lt;b&gt;ShowEmpty()&lt;/b&gt;&lt;br&gt;&lt;font style=&#39;font-size:10px&#39; color=&#39;#555555&#39;&gt;何も出さない&lt;/font&gt;&lt;div style=&#39;font-size:10px;text-align:left;margin-top:3px&#39;&gt;&lt;font color=&#39;#33691E&#39;&gt;画面 全部オフ&lt;/font&gt;&lt;/div&gt;" vertex="1">
+                    <mxGeometry height="59" width="240" x="15" y="289" as="geometry"/>
+                </mxCell>
+                <mxCell id="sl_click" parent="L_slot" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;arcSize=12;fillColor=#E1BEE7;strokeColor=#6A1B9A;verticalAlign=top;spacingTop=4;" value="&lt;b&gt;OnClick()&lt;/b&gt;&lt;br&gt;&lt;font style=&#39;font-size:10px&#39; color=&#39;#555555&#39;&gt;押されたことを棚に知らせる&lt;/font&gt;&lt;div style=&#39;font-size:10px;text-align:left;margin-top:3px&#39;&gt;&lt;font color=&#39;#263238&#39;&gt;→ OmiyageShelf の OnSlotClicked()&lt;/font&gt;&lt;/div&gt;" vertex="1">
+                    <mxGeometry height="59" width="240" x="15" y="366" as="geometry"/>
+                </mxCell>
+                <mxCell id="L_view" parent="1" style="swimlane;html=1;whiteSpace=wrap;startSize=44;rounded=1;arcSize=4;fontSize=13;fillColor=#CFD8DC;swimlaneFillColor=#FAFAFA;strokeColor=#455A64;" value="StageView.cs&lt;br&gt;&lt;font style=&#39;font-size:10px&#39; color=&#39;#555555&#39;&gt;付いている物：StageView&lt;/font&gt;" vertex="1">
+                    <mxGeometry height="161" width="270" x="950" y="960" as="geometry"/>
+                </mxCell>
+                <mxCell id="v_show" parent="L_view" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;arcSize=12;fillColor=#FFFFFF;strokeColor=#455A64;verticalAlign=top;spacingTop=4;" value="&lt;b&gt;ShowStage(index)&lt;/b&gt;&lt;br&gt;&lt;font style=&#39;font-size:10px&#39; color=&#39;#555555&#39;&gt;背景と県名を入れ替える&lt;/font&gt;&lt;div style=&#39;font-size:10px;text-align:left;margin-top:3px&#39;&gt;&lt;font color=&#39;#BF360C&#39;&gt;← StageProgress の Start()・GoNextStage()&lt;/font&gt;&lt;br&gt;&lt;font color=&#39;#607D8B&#39;&gt;読む StageDatabase.asset&lt;/font&gt;&lt;br&gt;&lt;font color=&#39;#33691E&#39;&gt;画面 Background・StageName&lt;/font&gt;&lt;/div&gt;" vertex="1">
+                    <mxGeometry height="89" width="240" x="15" y="58" as="geometry"/>
+                </mxCell>
+                <mxCell id="c2" edge="1" parent="1" source="w_start" style="edgeStyle=none;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;strokeColor=#1565C0;strokeWidth=2;" target="w_text" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="c3" edge="1" parent="1" source="w_add" style="edgeStyle=none;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;strokeColor=#1565C0;strokeWidth=2;" target="w_text" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="c4" edge="1" parent="1" source="w_spend" style="edgeStyle=none;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;strokeColor=#1565C0;strokeWidth=2;" target="w_text" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="c5" edge="1" parent="1" source="f_fmt" style="edgeStyle=none;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;strokeColor=#1565C0;strokeWidth=2;" target="f_unit" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="c6" edge="1" parent="1" source="p_start" style="edgeStyle=none;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;strokeColor=#1565C0;strokeWidth=2;" target="p_view" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="c7" edge="1" parent="1" source="p_add" style="edgeStyle=none;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;strokeColor=#1565C0;strokeWidth=2;" target="p_next" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="c8" edge="1" parent="1" source="p_add" style="edgeStyle=none;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;strokeColor=#1565C0;strokeWidth=2;" target="p_view" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="c9" edge="1" parent="1" source="p_next" style="edgeStyle=none;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;strokeColor=#78909C;dashed=1;strokeColor=#1565C0;" target="p_last" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="c10" edge="1" parent="1" source="o_buy" style="edgeStyle=none;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;strokeColor=#1565C0;strokeWidth=2;edgeStyle=orthogonalEdgeStyle;rounded=1;exitX=1;exitY=0.5;entryX=1;entryY=0.5;" target="o_price" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="c11" edge="1" parent="1" source="sh_up" style="edgeStyle=none;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;strokeColor=#1565C0;strokeWidth=2;" target="sh_slots" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="c12" edge="1" parent="1" source="sh_up" style="edgeStyle=none;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;strokeColor=#1565C0;strokeWidth=2;" target="sh_detail" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="c13" edge="1" parent="1" source="sh_up" style="edgeStyle=none;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;strokeColor=#78909C;dashed=1;strokeColor=#1565C0;edgeStyle=orthogonalEdgeStyle;rounded=1;exitX=1;exitY=0.85;entryX=0;entryY=0.5;" target="sh_max" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="c14" edge="1" parent="1" source="sh_next" style="edgeStyle=none;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;strokeColor=#1565C0;strokeWidth=2;" target="sh_change" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="c15" edge="1" parent="1" source="sh_prev" style="edgeStyle=none;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;strokeColor=#1565C0;strokeWidth=2;" target="sh_change" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="c16" edge="1" parent="1" source="sh_change" style="edgeStyle=none;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;strokeColor=#78909C;dashed=1;strokeColor=#1565C0;" target="sh_max" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="c17" edge="1" parent="1" source="st_down" style="edgeStyle=none;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;strokeColor=#AD1457;dashed=1;dashPattern=1 3;" target="st_up" value="isHiding = true で伝える">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="c18" edge="1" parent="1" source="sl_setup" style="edgeStyle=none;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;strokeColor=#AD1457;dashed=1;dashPattern=1 3;edgeStyle=orthogonalEdgeStyle;rounded=1;exitX=1;exitY=0.5;entryX=1;entryY=0.5;" target="sl_click" value="shelf・slotNumber&lt;br&gt;を覚えておく">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="c19" parent="1" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontSize=12;" value="&lt;b&gt;見かた&lt;/b&gt;" vertex="1">
+                    <mxGeometry height="24" width="380" x="1580" y="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="c20" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;arcSize=12;fillColor=#FFE0B2;strokeColor=#E65100;" value="" vertex="1">
+                    <mxGeometry height="22" width="40" x="1580" y="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="c21" parent="1" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontSize=12;verticalAlign=middle;" value="Unity が自動で呼ぶ（Awake・Start・Update）" vertex="1">
+                    <mxGeometry height="26" width="330" x="1630" y="88" as="geometry"/>
+                </mxCell>
+                <mxCell id="c22" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;arcSize=12;fillColor=#FFCDD2;strokeColor=#C62828;" value="" vertex="1">
+                    <mxGeometry height="22" width="40" x="1580" y="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="c23" parent="1" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontSize=12;verticalAlign=middle;" value="タップで Unity が呼ぶ（OnPointerDown）" vertex="1">
+                    <mxGeometry height="26" width="330" x="1630" y="118" as="geometry"/>
+                </mxCell>
+                <mxCell id="c24" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;arcSize=12;fillColor=#E1BEE7;strokeColor=#6A1B9A;" value="" vertex="1">
+                    <mxGeometry height="22" width="40" x="1580" y="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="c25" parent="1" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontSize=12;verticalAlign=middle;" value="Button の On Click() から呼ばれる" vertex="1">
+                    <mxGeometry height="26" width="330" x="1630" y="148" as="geometry"/>
+                </mxCell>
+                <mxCell id="c26" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;arcSize=12;fillColor=#FFFFFF;strokeColor=#455A64;" value="" vertex="1">
+                    <mxGeometry height="22" width="40" x="1580" y="180" as="geometry"/>
+                </mxCell>
+                <mxCell id="c27" parent="1" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontSize=12;verticalAlign=middle;" value="スクリプトから呼ばれる関数" vertex="1">
+                    <mxGeometry height="26" width="330" x="1630" y="178" as="geometry"/>
+                </mxCell>
+                <mxCell id="c28" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;arcSize=12;fillColor=#ECEFF1;strokeColor=#78909C;dashed=1;fontStyle=2;" value="" vertex="1">
+                    <mxGeometry height="22" width="40" x="1580" y="210" as="geometry"/>
+                </mxCell>
+                <mxCell id="c29" parent="1" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontSize=12;verticalAlign=middle;" value="プロパティ（値を読むだけ）" vertex="1">
+                    <mxGeometry height="26" width="330" x="1630" y="208" as="geometry"/>
+                </mxCell>
+                <mxCell id="c30" parent="1" style="text;html=1;" value="" vertex="1">
+                    <mxGeometry height="1" width="1" x="1580" y="251" as="geometry"/>
+                </mxCell>
+                <mxCell id="c31" parent="1" style="text;html=1;" value="" vertex="1">
+                    <mxGeometry height="1" width="1" x="1620" y="251" as="geometry"/>
+                </mxCell>
+                <mxCell id="c32" edge="1" parent="1" source="c30" style="edgeStyle=none;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;strokeColor=#1565C0;strokeWidth=2;" target="c31">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="c33" parent="1" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontSize=12;verticalAlign=middle;" value="同じファイルの中で関数を呼ぶ" vertex="1">
+                    <mxGeometry height="26" width="330" x="1630" y="238" as="geometry"/>
+                </mxCell>
+                <mxCell id="c34" parent="1" style="text;html=1;" value="" vertex="1">
+                    <mxGeometry height="1" width="1" x="1580" y="281" as="geometry"/>
+                </mxCell>
+                <mxCell id="c35" parent="1" style="text;html=1;" value="" vertex="1">
+                    <mxGeometry height="1" width="1" x="1620" y="281" as="geometry"/>
+                </mxCell>
+                <mxCell id="c36" edge="1" parent="1" source="c34" style="edgeStyle=none;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;strokeColor=#78909C;dashed=1;strokeColor=#1565C0;" target="c35">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="c37" parent="1" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontSize=12;verticalAlign=middle;" value="同じファイルの中で値を読む" vertex="1">
+                    <mxGeometry height="26" width="330" x="1630" y="268" as="geometry"/>
+                </mxCell>
+                <mxCell id="c38" parent="1" style="text;html=1;" value="" vertex="1">
+                    <mxGeometry height="1" width="1" x="1580" y="311" as="geometry"/>
+                </mxCell>
+                <mxCell id="c39" parent="1" style="text;html=1;" value="" vertex="1">
+                    <mxGeometry height="1" width="1" x="1620" y="311" as="geometry"/>
+                </mxCell>
+                <mxCell id="c40" edge="1" parent="1" source="c38" style="edgeStyle=none;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;strokeColor=#AD1457;dashed=1;dashPattern=1 3;" target="c39">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="c41" parent="1" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontSize=12;verticalAlign=middle;" value="呼ばずに、変数で伝える" vertex="1">
+                    <mxGeometry height="26" width="330" x="1630" y="298" as="geometry"/>
+                </mxCell>
+                <mxCell id="c42" parent="1" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontSize=12;" value="&lt;b&gt;箱の中の行&lt;/b&gt;&lt;br&gt;&lt;font color=&#39;#263238&#39;&gt;→ ほかのファイルの関数を呼ぶ&lt;/font&gt;&lt;br&gt;&lt;font color=&#39;#607D8B&#39;&gt;読む ほかのファイルの値を読む&lt;/font&gt;&lt;br&gt;&lt;font color=&#39;#33691E&#39;&gt;画面 画面の部品を書き換える&lt;/font&gt;&lt;br&gt;&lt;font color=&#39;#BF360C&#39;&gt;← ほかのファイルから呼ばれる・読まれる&lt;/font&gt;" vertex="1">
+                    <mxGeometry height="100" width="380" x="1580" y="340" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram name="3 流れ" id="3320e6b581e3828c">
+        <mxGraphModel dx="2078" dy="1010" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="c1" parent="1" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;" value="ぷにっかー Unity版：動く順番" vertex="1">
+                    <mxGeometry height="40" width="900" x="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="hA" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fontStyle=1;fillColor=#37474F;fontColor=#FFFFFF;strokeColor=none;" value="A. ゲームを開いたとき" vertex="1">
+                    <mxGeometry height="40" width="300" x="40" y="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="a1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#FFFFFF;strokeColor=#455A64;fillColor=#FFE0B2;strokeColor=#E65100;" value="&lt;b&gt;Awake()&lt;/b&gt;（全部の Awake が先）&lt;br&gt;OmiyageShop：県の数だけレベル0を用意" vertex="1">
+                    <mxGeometry height="60" width="300" x="40" y="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="c2" edge="1" parent="1" source="hA" style="edgeStyle=none;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;strokeColor=#455A64;" target="a1" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="a2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#FFFFFF;strokeColor=#455A64;fillColor=#FFE0B2;strokeColor=#E65100;" value="&lt;b&gt;Start()&lt;/b&gt;&lt;br&gt;MochiWallet：「0 もち」を出す&lt;br&gt;StageProgress：ShowStage(0) で鹿児島、バーも出す" vertex="1">
+                    <mxGeometry height="76" width="300" x="40" y="224" as="geometry"/>
+                </mxCell>
+                <mxCell id="c3" edge="1" parent="1" source="a1" style="edgeStyle=none;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;strokeColor=#455A64;" target="a2" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="a3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#FFFFFF;strokeColor=#455A64;fillColor=#FFE0B2;strokeColor=#E65100;" value="&lt;b&gt;StartScreen.Update()&lt;/b&gt;（毎フレーム）&lt;br&gt;「タップしてスタート」が cos で点滅" vertex="1">
+                    <mxGeometry height="60" width="300" x="40" y="334" as="geometry"/>
+                </mxCell>
+                <mxCell id="c4" edge="1" parent="1" source="a2" style="edgeStyle=none;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;strokeColor=#455A64;" target="a3" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="a4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#FFFFFF;strokeColor=#455A64;fillColor=#FFCDD2;strokeColor=#C62828;" value="&lt;b&gt;タップ → StartScreen.OnPointerDown()&lt;/b&gt;&lt;br&gt;isHiding = true、タップを後ろに通す" vertex="1">
+                    <mxGeometry height="60" width="300" x="40" y="428" as="geometry"/>
+                </mxCell>
+                <mxCell id="c5" edge="1" parent="1" source="a3" style="edgeStyle=none;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;strokeColor=#455A64;" target="a4" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="a5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#FFFFFF;strokeColor=#455A64;fillColor=#FFE0B2;strokeColor=#E65100;" value="&lt;b&gt;StartScreen.Update()&lt;/b&gt;&lt;br&gt;0.6秒かけて薄く・1.08倍に大きく" vertex="1">
+                    <mxGeometry height="60" width="300" x="40" y="522" as="geometry"/>
+                </mxCell>
+                <mxCell id="c6" edge="1" parent="1" source="a4" style="edgeStyle=none;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;strokeColor=#455A64;" target="a5" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="a6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#FFFFFF;strokeColor=#455A64;" value="SetActive(false) で消える → ゲーム画面" vertex="1">
+                    <mxGeometry height="50" width="300" x="40" y="616" as="geometry"/>
+                </mxCell>
+                <mxCell id="c7" edge="1" parent="1" source="a5" style="edgeStyle=none;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;strokeColor=#455A64;" target="a6" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="hB" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fontStyle=1;fillColor=#37474F;fontColor=#FFFFFF;strokeColor=none;" value="B. もちすけをタップしたとき" vertex="1">
+                    <mxGeometry height="40" width="300" x="400" y="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="b1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#FFFFFF;strokeColor=#455A64;fillColor=#FFCDD2;strokeColor=#C62828;" value="&lt;b&gt;EventSystem → MochisukeTap.OnPointerDown()&lt;/b&gt;" vertex="1">
+                    <mxGeometry height="50" width="300" x="400" y="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="b2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#FFFFFF;strokeColor=#455A64;" value="OmiyageShop の &lt;b&gt;TapPower&lt;/b&gt; を読む&lt;br&gt;&lt;font style=&#39;font-size:10px&#39; color=&#39;#555555&#39;&gt;1 ＋ タップ効果 × レベル の合計&lt;/font&gt;" vertex="1">
+                    <mxGeometry height="54" width="300" x="400" y="214" as="geometry"/>
+                </mxCell>
+                <mxCell id="b3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#FFFFFF;strokeColor=#455A64;" value="&lt;b&gt;MochiWallet.Add(tapPower)&lt;/b&gt;&lt;br&gt;mochi が増える → UpdateText()&lt;br&gt;→ MochiFormat.Format() → MochiCount" vertex="1">
+                    <mxGeometry height="70" width="300" x="400" y="302" as="geometry"/>
+                </mxCell>
+                <mxCell id="b4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#FFFFFF;strokeColor=#455A64;" value="&lt;b&gt;StageProgress.AddProgress(tapPower)&lt;/b&gt;&lt;br&gt;progress が増える" vertex="1">
+                    <mxGeometry height="54" width="300" x="400" y="406" as="geometry"/>
+                </mxCell>
+                <mxCell id="b5" parent="1" style="rhombus;whiteSpace=wrap;html=1;fontSize=12;fillColor=#FFFDE7;strokeColor=#F9A825;" value="progress が&lt;br&gt;distance 以上？" vertex="1">
+                    <mxGeometry height="90" width="200" x="450" y="494" as="geometry"/>
+                </mxCell>
+                <mxCell id="b6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#FFFFFF;strokeColor=#455A64;" value="&lt;b&gt;GoNextStage()&lt;/b&gt;" vertex="1">
+                    <mxGeometry height="40" width="140" x="560" y="618" as="geometry"/>
+                </mxCell>
+                <mxCell id="b7" parent="1" style="rhombus;whiteSpace=wrap;html=1;fontSize=12;fillColor=#FFFDE7;strokeColor=#F9A825;fontSize=11;" value="最後の県？" vertex="1">
+                    <mxGeometry height="70" width="140" x="560" y="692" as="geometry"/>
+                </mxCell>
+                <mxCell id="b8" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#FFFFFF;strokeColor=#455A64;fontSize=11;" value="isGoal = true&lt;br&gt;バーを満タンで止める" vertex="1">
+                    <mxGeometry height="54" width="135" x="565" y="800" as="geometry"/>
+                </mxCell>
+                <mxCell id="b9" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#FFFFFF;strokeColor=#455A64;fontSize=11;" value="番号+1、progress = 0&lt;br&gt;StageView.ShowStage()&lt;br&gt;で次の県を出す" vertex="1">
+                    <mxGeometry height="70" width="150" x="390" y="692" as="geometry"/>
+                </mxCell>
+                <mxCell id="b10" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#FFFFFF;strokeColor=#455A64;" value="&lt;b&gt;UpdateProgressView()&lt;/b&gt;&lt;br&gt;バーの fillAmount と&lt;br&gt;「次のエリアまで : 〇〇 もちkcal」" vertex="1">
+                    <mxGeometry height="70" width="300" x="400" y="900" as="geometry"/>
+                </mxCell>
+                <mxCell id="c8" edge="1" parent="1" source="hB" style="edgeStyle=none;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;strokeColor=#455A64;" target="b1" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="c9" edge="1" parent="1" source="b1" style="edgeStyle=none;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;strokeColor=#455A64;" target="b2" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="c10" edge="1" parent="1" source="b2" style="edgeStyle=none;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;strokeColor=#455A64;" target="b3" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="c11" edge="1" parent="1" source="b3" style="edgeStyle=none;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;strokeColor=#455A64;" target="b4" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="c12" edge="1" parent="1" source="b4" style="edgeStyle=none;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;strokeColor=#455A64;" target="b5" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="c13" edge="1" parent="1" source="b6" style="edgeStyle=none;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;strokeColor=#455A64;" target="b7" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="c14" edge="1" parent="1" source="b5" style="edgeStyle=none;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;strokeColor=#455A64;" target="b6" value="はい">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="c15" edge="1" parent="1" source="b7" style="edgeStyle=none;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;strokeColor=#455A64;" target="b8" value="はい">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="c16" edge="1" parent="1" source="b7" style="edgeStyle=none;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;strokeColor=#455A64;" target="b9" value="いいえ">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="c17" edge="1" parent="1" source="b5" style="edgeStyle=none;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;strokeColor=#455A64;exitX=0;exitY=0.5;entryX=0;entryY=0.5;edgeStyle=orthogonalEdgeStyle;" target="b10" value="いいえ">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="c18" edge="1" parent="1" source="b9" style="edgeStyle=none;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;strokeColor=#455A64;" target="b10" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="c19" edge="1" parent="1" source="b8" style="edgeStyle=none;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;strokeColor=#455A64;" target="b10" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="hC" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fontStyle=1;fillColor=#37474F;fontColor=#FFFFFF;strokeColor=none;" value="C. 毎フレーム（自動増加）" vertex="1">
+                    <mxGeometry height="40" width="300" x="760" y="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="p0eOIaAqSHGerG0Nq_41-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#FFFFFF;strokeColor=#455A64;fillColor=#FFE0B2;strokeColor=#E65100;" value="&lt;b&gt;Unity → AutoIncome.Update()&lt;/b&gt;" vertex="1">
+                    <mxGeometry height="44" width="300" x="760" y="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="p0eOIaAqSHGerG0Nq_41-2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#FFFFFF;strokeColor=#455A64;" value="perSecond = OmiyageShop の &lt;b&gt;Mps&lt;/b&gt; × mpsBoost（1.5）" vertex="1">
+                    <mxGeometry height="54" width="300" x="760" y="208" as="geometry"/>
+                </mxCell>
+                <mxCell id="p0eOIaAqSHGerG0Nq_41-3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#FFFFFF;strokeColor=#455A64;" value="amount = perSecond × Time.deltaTime&lt;br&gt;&lt;font style=&#39;font-size:10px&#39; color=&#39;#555555&#39;&gt;前のフレームからの秒数の分だけ&lt;/font&gt;" vertex="1">
+                    <mxGeometry height="54" width="300" x="760" y="296" as="geometry"/>
+                </mxCell>
+                <mxCell id="p0eOIaAqSHGerG0Nq_41-4" parent="1" style="rhombus;whiteSpace=wrap;html=1;fontSize=12;fillColor=#FFFDE7;strokeColor=#F9A825;" value="amount が&lt;br&gt;0 より大きい？" vertex="1">
+                    <mxGeometry height="90" width="200" x="810" y="384" as="geometry"/>
+                </mxCell>
+                <mxCell id="p0eOIaAqSHGerG0Nq_41-5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#FFFFFF;strokeColor=#455A64;" value="&lt;b&gt;MochiWallet.Add(amount)&lt;/b&gt;&lt;br&gt;&lt;b&gt;StageProgress.AddProgress(amount)&lt;/b&gt;&lt;br&gt;&lt;font style=&#39;font-size:10px&#39; color=&#39;#555555&#39;&gt;ここから先は B と同じ&lt;/font&gt;" vertex="1">
+                    <mxGeometry height="70" width="300" x="760" y="508" as="geometry"/>
+                </mxCell>
+                <mxCell id="p0eOIaAqSHGerG0Nq_41-6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#FFFFFF;strokeColor=#455A64;" value="MpsText に「自動増加: 〇〇 もち/秒」" vertex="1">
+                    <mxGeometry height="44" width="300" x="760" y="612" as="geometry"/>
+                </mxCell>
+                <mxCell id="c20" edge="1" parent="1" source="hC" style="edgeStyle=none;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;strokeColor=#455A64;" target="c1" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="c21" edge="1" parent="1" source="c1" style="edgeStyle=none;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;strokeColor=#455A64;" target="c2" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="c22" edge="1" parent="1" source="c2" style="edgeStyle=none;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;strokeColor=#455A64;" target="c3" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="c23" edge="1" parent="1" source="c3" style="edgeStyle=none;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;strokeColor=#455A64;" target="c4" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="c24" edge="1" parent="1" source="c5" style="edgeStyle=none;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;strokeColor=#455A64;" target="c6" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="c25" edge="1" parent="1" source="c4" style="edgeStyle=none;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;strokeColor=#455A64;" target="c5" value="はい">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="c26" edge="1" parent="1" source="c4" style="edgeStyle=none;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;strokeColor=#455A64;exitX=1;exitY=0.5;entryX=1;entryY=0.5;edgeStyle=orthogonalEdgeStyle;" target="c6" value="いいえ">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="hD" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fontStyle=1;fillColor=#37474F;fontColor=#FFFFFF;strokeColor=none;" value="D. おみやげを買うとき" vertex="1">
+                    <mxGeometry height="40" width="320" x="1120" y="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="d1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#FFFFFF;strokeColor=#455A64;fillColor=#E1BEE7;strokeColor=#6A1B9A;" value="&lt;b&gt;IdouButton の On Click()&lt;/b&gt;&lt;br&gt;ShopPanel.SetActive(true) でお店を開く" vertex="1">
+                    <mxGeometry height="54" width="320" x="1120" y="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="d2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#FFFFFF;strokeColor=#455A64;fillColor=#FFE0B2;strokeColor=#E65100;" value="&lt;b&gt;OmiyageShelf.Start()&lt;/b&gt;（最初の1回だけ）&lt;br&gt;Slot0〜8 の Setup() に棚と番号を渡す" vertex="1">
+                    <mxGeometry height="54" width="320" x="1120" y="218" as="geometry"/>
+                </mxCell>
+                <mxCell id="d3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#FFFFFF;strokeColor=#455A64;fillColor=#FFE0B2;strokeColor=#E65100;" value="&lt;b&gt;OmiyageShelf.Update()&lt;/b&gt;（毎フレーム）&lt;br&gt;UpdateSlots()：9マス ／ UpdateDetail()：詳細" vertex="1">
+                    <mxGeometry height="54" width="320" x="1120" y="306" as="geometry"/>
+                </mxCell>
+                <mxCell id="d4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#FFFFFF;strokeColor=#455A64;fillColor=#E1BEE7;strokeColor=#6A1B9A;" value="&lt;b&gt;マスを押す&lt;/b&gt;：Slot の OnClick()&lt;br&gt;→ OmiyageShelf.OnSlotClicked(番号)&lt;br&gt;→ selectedIndex ＝ ページ×9＋番号" vertex="1">
+                    <mxGeometry height="70" width="320" x="1120" y="394" as="geometry"/>
+                </mxCell>
+                <mxCell id="d5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#FFFFFF;strokeColor=#455A64;fillColor=#E1BEE7;strokeColor=#6A1B9A;" value="&lt;b&gt;購入ボタン&lt;/b&gt;：OnClickBuy()&lt;br&gt;→ OmiyageShop.TryBuy(selectedIndex)" vertex="1">
+                    <mxGeometry height="54" width="320" x="1120" y="498" as="geometry"/>
+                </mxCell>
+                <mxCell id="d6" parent="1" style="rhombus;whiteSpace=wrap;html=1;fontSize=12;fillColor=#FFFDE7;strokeColor=#F9A825;fontSize=11;" value="MochiWallet.TrySpend(値段)&lt;br&gt;もちが足りる？" vertex="1">
+                    <mxGeometry height="100" width="200" x="1180" y="586" as="geometry"/>
+                </mxCell>
+                <mxCell id="d7" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#FFFFFF;strokeColor=#455A64;" value="もちを払う&lt;br&gt;levels[番号] が +1" vertex="1">
+                    <mxGeometry height="50" width="190" x="1140" y="720" as="geometry"/>
+                </mxCell>
+                <mxCell id="d8" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#FFFFFF;strokeColor=#455A64;" value="何もしない" vertex="1">
+                    <mxGeometry height="50" width="84" x="1356" y="720" as="geometry"/>
+                </mxCell>
+                <mxCell id="d9" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#FFFFFF;strokeColor=#455A64;" value="次の Update() で、レベル・値段・&lt;br&gt;タップ力（TapPower）・自動増加（Mps）が&lt;br&gt;新しい値で画面に出る" vertex="1">
+                    <mxGeometry height="70" width="320" x="1120" y="804" as="geometry"/>
+                </mxCell>
+                <mxCell id="c27" edge="1" parent="1" source="hD" style="edgeStyle=none;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;strokeColor=#455A64;" target="d1" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="c28" edge="1" parent="1" source="d1" style="edgeStyle=none;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;strokeColor=#455A64;" target="d2" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="c29" edge="1" parent="1" source="d2" style="edgeStyle=none;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;strokeColor=#455A64;" target="d3" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="c30" edge="1" parent="1" source="d3" style="edgeStyle=none;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;strokeColor=#455A64;" target="d4" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="c31" edge="1" parent="1" source="d4" style="edgeStyle=none;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;strokeColor=#455A64;" target="d5" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="c32" edge="1" parent="1" source="d5" style="edgeStyle=none;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;strokeColor=#455A64;" target="d6" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="c33" edge="1" parent="1" source="d7" style="edgeStyle=none;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;strokeColor=#455A64;" target="d9" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="c34" edge="1" parent="1" source="d6" style="edgeStyle=none;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;strokeColor=#455A64;" target="d7" value="はい">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="c35" edge="1" parent="1" source="d6" style="edgeStyle=none;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;strokeColor=#455A64;exitX=1;exitY=0.5;entryX=0.5;entryY=0;edgeStyle=orthogonalEdgeStyle;" target="d8" value="いいえ">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="c36" parent="1" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontSize=12;" value="&lt;b&gt;見かた&lt;/b&gt;" vertex="1">
+                    <mxGeometry height="24" width="300" x="40" y="700" as="geometry"/>
+                </mxCell>
+                <mxCell id="c37" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;arcSize=12;fillColor=#FFE0B2;strokeColor=#E65100;" value="" vertex="1">
+                    <mxGeometry height="22" width="40" x="40" y="730" as="geometry"/>
+                </mxCell>
+                <mxCell id="c38" parent="1" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontSize=12;verticalAlign=middle;" value="Unity が自動で呼ぶ" vertex="1">
+                    <mxGeometry height="26" width="250" x="90" y="728" as="geometry"/>
+                </mxCell>
+                <mxCell id="c39" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;arcSize=12;fillColor=#FFCDD2;strokeColor=#C62828;" value="" vertex="1">
+                    <mxGeometry height="22" width="40" x="40" y="760" as="geometry"/>
+                </mxCell>
+                <mxCell id="c40" parent="1" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontSize=12;verticalAlign=middle;" value="タップで Unity が呼ぶ" vertex="1">
+                    <mxGeometry height="26" width="250" x="90" y="758" as="geometry"/>
+                </mxCell>
+                <mxCell id="c41" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;arcSize=12;fillColor=#E1BEE7;strokeColor=#6A1B9A;" value="" vertex="1">
+                    <mxGeometry height="22" width="40" x="40" y="790" as="geometry"/>
+                </mxCell>
+                <mxCell id="c42" parent="1" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontSize=12;verticalAlign=middle;" value="Button の On Click() から" vertex="1">
+                    <mxGeometry height="26" width="250" x="90" y="788" as="geometry"/>
+                </mxCell>
+                <mxCell id="c43" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;arcSize=12;whiteSpace=wrap;html=1;fontSize=12;fillColor=#FFFDE7;strokeColor=#F9A825;" value="" vertex="1">
+                    <mxGeometry height="22" width="40" x="40" y="820" as="geometry"/>
+                </mxCell>
+                <mxCell id="c44" parent="1" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontSize=12;verticalAlign=middle;" value="分かれ道（if）" vertex="1">
+                    <mxGeometry height="26" width="250" x="90" y="818" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
